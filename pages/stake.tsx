@@ -13,7 +13,7 @@ import {
 } from "@thirdweb-dev/react";
 import Loading from "../components/Loading";
 import { useEffect, useState } from "react";
-import { Bignumber, ethers } from "ethers";
+import { BigNumber, ethers } from "ethers";
 import {
   tokenContractAddress,
   nftDropContractAddress,
@@ -37,7 +37,7 @@ const Stake: NextPage = () => {
     "nft-drop"
   );
 
-  const [claimableRewards, setClaimableRewards] = useState<Bignumber>();
+  const [claimableRewards, setClaimableRewards] = useState<BigNumber>();
   const { data: tokenBalance } = useTokenBalance(tokenContract, address);
   const { data: ownedNfts } = useOwnedNFTs(nftDropContract, address);
   const { data: stakedTokens } = useContractRead(contract, "getStakeInfo", [
