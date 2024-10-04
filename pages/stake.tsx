@@ -19,8 +19,8 @@ import {
   nftDropContractAddress,
   stakingContractAddress,
 } from "../contractAddress";
+import NFTCard from "@/components/NFTCard";
 
-import NFTCard from "../components/NfTCard";
 
 
 const Stake: NextPage = () => {
